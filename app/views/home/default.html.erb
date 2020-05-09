@@ -6,9 +6,9 @@ function refreshPage(){
 }, 3000);
 }
 </script>
-<div id="movie">
-  <%= @movie %>
+<div id="movie" style="color:red; font-size:8em;">
+  <%= @movie.title %>
 </div>
 <br><br><br>
 
-<button type="button" onClick="refreshPage()">Refresh</button>
+<button type="button" style="background-color: #4CAF50;padding: 15px 32px; color: blue; width: 100%;" onClick="refreshPage()">Refresh</button>
