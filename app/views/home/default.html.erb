@@ -1,1 +1,14 @@
-<%= @movie %>
+<script>
+function refreshPage(){
+    document.getElementById("movie").innerHTML = "NEW MOVIE";
+    setTimeout(function(){
+   window.location.reload(1);
+}, 3000);
+}
+</script>
+<div id="movie">
+  <%= @movie %>
+</div>
+<br><br><br>
+
+<button type="button" onClick="refreshPage()">Refresh</button>
