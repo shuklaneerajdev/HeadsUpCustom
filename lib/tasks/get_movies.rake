@@ -8,7 +8,11 @@ task import_list: :environment do |t|
   doc.css('.lister-item-header a').each do |link|
     puts "****************************************"
     puts link.content
-    Movie.create!(title: link.content)
+    begin
+      Movie.create!(title: link.content)
+    rescue ActiveRecord::ActiveRecordError
+      puts "Could not insert record."
+    end
     puts "****************************************"
   end
 end
